@@ -4,7 +4,7 @@ Tijdelijke coala voor leden beheer Chiro Schelle
 
 ## TODO
 
-- [ ] Simpele stijl
+- [ ] Simpele style
 - [ ] Database
 - [ ] ERD
 - [ ] fucnties:
