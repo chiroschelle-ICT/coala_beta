@@ -7,15 +7,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { NgChartsModule } from 'ng2-charts';
+import { ChartComponent } from './chart/chart.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
+    NgChartsModule,
     AppRoutingModule
   ],
   providers: [],

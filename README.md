@@ -5,6 +5,7 @@ Tijdelijke coala voor leden beheer Chiro Schelle
 ## TODO
 
 - [ ] Simpele style
+- [ ] dark mode toevoegen
 - [ ] Database
 - [ ] ERD
 - [ ] fucnties:
@@ -18,3 +19,11 @@ Tijdelijke coala voor leden beheer Chiro Schelle
   - [ ] ICT Administrator --> WG ICT
   - [ ] Admin --> Vooral voor financen en VB
   - [ ] Leiding --> Viewer
+
+## Installs
+
+### Angular
+```npm install -g @angular/cli```
+
+### Charts.js
+```npm install ng2-charts chart.js --save```
