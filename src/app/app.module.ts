@@ -13,6 +13,8 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { AuthenticationRoutingModule } from './authentication/authentication-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AfdelingenComponent } from './afdelingen/afdelingen.component';
+import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     ChartComponent,
+    AfdelingenComponent,
+    AfdelingLijstComponent,
   ],
   imports: [
     BrowserModule,

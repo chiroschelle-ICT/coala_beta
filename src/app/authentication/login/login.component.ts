@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getUsers().subscribe((data: any[]) => {
+    this.dataService.getLeden().subscribe((data: any[]) => {
       this.users = data;
     });  
   }
   loginUser(item:any) {
-    console.log(item.name)
+    
   }
 
 
