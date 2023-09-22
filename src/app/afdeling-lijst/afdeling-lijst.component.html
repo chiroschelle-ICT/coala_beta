@@ -1,5 +1,7 @@
-<div *ngFor="let lid of leden">
-    <p>Naam: {{ lid.naam }}</p>
-    <p>Voornaam: {{ lid.voornaam }}</p>
-    <p>Afdeling: {{ lid.afdeling }}</p>
+<div class="grid grid-cols-5 gap-3">
+<div *ngFor="let lid of leden" class="bg-white border-2 border-black w-fit p-4 rounded-lg m-4 shadow-md ">
+        <p class="text-lg font-semibold">Naam: {{ lid.naam }}</p>
+        <p class="text-base">Voornaam: {{ lid.voornaam }}</p>
+        <p class="text-sm text-gray-600">Afdeling: {{ lid.afdeling }}</p>
+    </div>
 </div>

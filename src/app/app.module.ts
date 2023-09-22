@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AfdelingenComponent } from './afdelingen/afdelingen.component';
 import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.componen
     AppRoutingModule,
     AuthenticationModule,
     AuthenticationRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

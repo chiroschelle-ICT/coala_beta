@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
+  private baseUrl = 'http://localhost:3000';
   private apiUsersUrl = 'http://localhost:3000/api/users'; // Anders doen --> geen var voor elke api route
   private apiLedenUrl = 'http://localhost:3000/api/leden'; 
 
@@ -20,5 +21,9 @@ export class DataService {
   // leden api calls
   getLeden(): Observable<any[]> {
     return this.http.get<any[]>(this.apiLedenUrl);
+  }
+  getLedenByParameter(parameterValue: any): Observable<any[]> {
+    const apiUrl = `${this.baseUrl}/api/leden/${parameterValue}`; 
+    return this.http.get<any[]>(apiUrl);
   }
 }
