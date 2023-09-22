@@ -22,8 +22,6 @@ export class DataService {
   getLeden(): Observable<any[]> {
     return this.http.get<any[]>(this.apiLedenUrl);
   }
-  getLedenByParameter(parameterValue: any): Observable<any[]> {
-    const apiUrl = `${this.baseUrl}/api/leden/${parameterValue}`; 
-    return this.http.get<any[]>(apiUrl);
-  }
+
+  
 }

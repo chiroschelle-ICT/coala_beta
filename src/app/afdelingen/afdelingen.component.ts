@@ -13,9 +13,7 @@ export class AfdelingenComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getUsers().subscribe((data) => {
-      this.users = data;
-    });
+
   }
 
 }
