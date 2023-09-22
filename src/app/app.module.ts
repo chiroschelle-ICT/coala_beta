@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgChartsModule } from 'ng2-charts';
 import { ChartComponent } from './chart/chart.component';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { AuthenticationRoutingModule } from './authentication/authentication-routing.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AuthenticationModule } from './authentication/authentication.module';
     BrowserModule,
     NgChartsModule,
     AppRoutingModule,
-    AuthenticationModule
+    AuthenticationModule,
+    AuthenticationRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
