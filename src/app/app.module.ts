@@ -12,6 +12,7 @@ import { ChartComponent } from './chart/chart.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { AuthenticationRoutingModule } from './authentication/authentication-routing.module';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AuthenticationRoutingModule } from './authentication/authentication-rou
     NgChartsModule,
     AppRoutingModule,
     AuthenticationModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
