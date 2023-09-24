@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms'
 import { users } from 'src/app/interfaces/users';
-
+import { DataService } from 'src/app/service/data.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,12 +9,17 @@ import { users } from 'src/app/interfaces/users';
 })
 export class LoginComponent implements OnInit {  
 
-  constructor() {}
+  users: any[] = [];
 
-  ngOnInit() {}
+  constructor(private dataService: DataService) {}
 
+  ngOnInit() {
+    this.dataService.getLeden().subscribe((data: any[]) => {
+      this.users = data;
+    });  
+  }
   loginUser(item:any) {
-    console.log(item.name)
+    
   }
 
 
