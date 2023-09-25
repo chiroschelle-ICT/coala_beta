@@ -13,9 +13,12 @@ export class AfdelingLijstComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getLedenPerAfdeling(10).subscribe((data: any[]) => {
+/*     this.dataService.getLeden().subscribe((data: any[]) => {
       this.leden = data;
-    });  
+    });   */
+    this.dataService.getAfdelingId(10).subscribe((data: any[]) => {
+      this.leden = data
+    }) 
   }
 
 }

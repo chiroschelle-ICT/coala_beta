@@ -1,7 +1,23 @@
-<div class="grid grid-cols-5 gap-3">
-<div *ngFor="let lid of leden" class="bg-white border-2 border-black w-fit p-4 rounded-lg m-4 shadow-md ">
-        <p class="text-lg font-semibold">Naam: {{ lid.naam }}</p>
-        <p class="text-base">Voornaam: {{ lid.voornaam }}</p>
-        <p class="text-sm text-gray-600">Afdeling: {{ lid.afdeling }}</p>
+<div class="text-center font-bold text-3xl mt-3">Kerels</div>
+
+<div class="grid grid-cols-3 gap-4 p-4">
+    <div *ngFor="let lid of leden" class="p-4 shadow-md text-center bg-orange-300 rounded-lg border-2 border-black">
+      <span class="text-2xl font-semibold">Naam: 
+        <span class="text-xl font-normal">{{ lid.naam }} {{ lid.voornaam }} </span>
+      </span> <br>
+      <span class="text-2xl font-semibold">Afdeling: 
+        <span class="text-xl font-normal">{{ lid.afdeling }}</span>
+      </span><br>
+      <span class="text-2xl font-semibold">Email: 
+        <span class="text-xl font-normal">{{ lid.email }} </span>
+      </span> <br>
+      <span class="text-2xl font-semibold">Telefoon: 
+        <span class="text-xl font-normal">{{ lid.telefoon }} </span>
+      </span> <br>
+      <span class="text-2xl font-semibold">Address:
+        <span class="text-xl font-normal"> {{ lid.Straat }} {{lid.Huisnummer}} {{lid.Gemeente}} {{lid.Postcode}}  </span>
+      </span> <br>
+      <button class="bg-red-500 border-2 border-red-800 hover:bg-red-800  ease-in-out duration-400 px-4 py-1 rounded-md text-white font-semibold mt-2"> Details </button>      
     </div>
-</div>
+  </div>
+  
