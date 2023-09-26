@@ -1,5 +1,43 @@
 <div class="text-center font-bold text-3xl mt-3"> {{afdeling}} </div>
 
+
+
+<div class="grid grid-cols-1 gap-2 px-2 py-4">
+  <div class="grid grid-cols-10">
+    <div>
+      Naam
+    </div>
+    <div>
+      Afdeling
+    </div> 
+    <div>
+      Details
+    </div>
+    <div>
+      Checks
+    </div>
+  </div>
+  <div *ngFor="let lid of leden" class="grid grid-cols-10 grid-rows-1 p-2 shadow-md  text-left bg-orange-300 rounded-lg border-2 border-black">
+    
+    <div class="w-80">
+      <span class="text-lg font-semibold">Naam: 
+        <span class="text-md font-normal">{{ lid.naam }} {{ lid.voornaam }} </span>
+      </span>
+    </div>
+
+    <div class="w-60 ml-32">
+      <span class="text-lg font-semibold">Afdeling: 
+        <span class="text-md font-normal">{{ lid.afdeling }}</span>
+      </span>
+    </div>
+    <div class="ml-24">
+      <button class="bg-red-500 border-2 border-red-800 hover:bg-red-800  ease-in-out duration-400 px-4 py-1 rounded-md text-white font-semibold mt-2"> Details </button>      
+    </div>
+  </div>
+</div>
+
+
+<!-- 
 <div class="grid grid-cols-3 gap-4 p-4">
     <div *ngFor="let lid of leden" class="p-4 shadow-md text-center bg-orange-300 rounded-lg border-2 border-black">
       <span class="text-2xl font-semibold">Naam: 
@@ -7,7 +45,7 @@
       </span> <br>
       <span class="text-2xl font-semibold">Afdeling: 
         <span class="text-xl font-normal">{{ lid.afdeling }}</span>
-      </span><br>
+      </span><br> 
       <span class="text-2xl font-semibold">Email: 
         <span class="text-xl font-normal">{{ lid.email }} </span>
       </span> <br>
@@ -19,5 +57,5 @@
       </span> <br>
       <button class="bg-red-500 border-2 border-red-800 hover:bg-red-800  ease-in-out duration-400 px-4 py-1 rounded-md text-white font-semibold mt-2"> Details </button>      
     </div>
-  </div>
-  
+</div>
+   -->
