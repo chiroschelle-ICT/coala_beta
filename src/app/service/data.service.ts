@@ -25,7 +25,7 @@ export class DataService {
     return this.http.get<any[]>(this.apiLedenUrl);
   }
   getAfdelingId(afdelingId: any): Observable<any[]>{
-    console.log("Loaded")
+    console.log("AfdelingId Service: "+afdelingId)
     return this.http.get<any[]>(`${this.baseUrl}/leden/${afdelingId}`);
   }
 

@@ -7,7 +7,7 @@ import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.componen
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'afdelingen', component: AfdelingenComponent },
-  { path: 'afdelingLijst', component: AfdelingLijstComponent },
+  { path: 'afdelingLijst/:afdelingParId', component: AfdelingLijstComponent },
   { 
     path: 'authentication',
     loadChildren: () => import('./authentication/authentication-routing.module').then(m => m.AuthenticationRoutingModule)

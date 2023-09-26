@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-afdeling-lijst',
@@ -9,15 +10,18 @@ import { DataService } from '../service/data.service';
 export class AfdelingLijstComponent implements OnInit {
 
   leden: any[] = [];
-
-  constructor(private dataService: DataService) {}
+  afdeling!: string
+  parameterValue!: number 
+  constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-/*     this.dataService.getLeden().subscribe((data: any[]) => {
-      this.leden = data;
-    });   */
-    this.dataService.getAfdelingId(10).subscribe((data: any[]) => {
+    this.route.params.subscribe(params => {
+      this.parameterValue = params['afdelingParId']
+      console.log("Parameter value: ", this.parameterValue)
+    })
+    this.dataService.getAfdelingId(this.parameterValue).subscribe((data: any[]) => {
       this.leden = data
+      this.afdeling = data[0].afdeling
     }) 
   }
 
