@@ -28,6 +28,10 @@ export class DataService {
     console.log("AfdelingId Service: "+afdelingId)
     return this.http.get<any[]>(`${this.baseUrl}/leden/${afdelingId}`);
   }
+  getLidById(lidId: any): Observable<any[]> {
+    console.log("Service Lid id: "+lidId)
+    return this.http.get<any[]>(`${this.baseUrl}/leden/lidId/${lidId}`)
+  }
 
 
   

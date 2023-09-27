@@ -15,6 +15,7 @@ import { AuthenticationRoutingModule } from './authentication/authentication-rou
 import { HttpClientModule } from '@angular/common/http';
 import { AfdelingenComponent } from './afdelingen/afdelingen.component';
 import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.component';
+import { LedenDetailsComponent } from './leden-details/leden-details.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.componen
     ChartComponent,
     AfdelingenComponent,
     AfdelingLijstComponent,
+    LedenDetailsComponent,
   ],
   imports: [
     BrowserModule,
