@@ -44,12 +44,12 @@ export class DataService {
   }
 
   // Checkbox Stuff
-  updateCheckboxState(lidId: number, lidgeldBetaald: boolean): Observable<any> {
+  updateCheckboxState(lidId: number, lidgeldBetaald: boolean) {
     const url = `${this.checkboxUrl}${lidId}`;
     const body = { checkData: lidgeldBetaald }; // Use lidgeldBetaald for checkbox state
     console.log("Service body");
-    console.log(body);
-    return this.http.put(url, body);
+    console.log(body.checkData);
+    this.http.put<any>(url, body).subscribe()
   }
 
   

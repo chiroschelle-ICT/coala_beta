@@ -32,14 +32,14 @@ export class AfdelingLijstComponent implements OnInit {
 
     console.log('lidgeldBetaald value:', isChecked); // Add this line
 
-    this.dataService.updateCheckboxState(lidId, true).subscribe(
+    this.dataService.updateCheckboxState(lidId, isChecked)/* .subscribe(
       (response) => {
         console.log('CheckBox state update succesfully')
       },(error) => {
         console.error('Erro updating checkbnox state: ',error)
       }
       
-    )
+    ) */
   }
 
 }
