@@ -12,6 +12,7 @@ export class AfdelingLijstComponent implements OnInit {
   leden: any[] = [];
   afdeling!: string
   parameterValue!: number 
+
   constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {

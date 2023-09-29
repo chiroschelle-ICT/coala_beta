@@ -1,0 +1,46 @@
+<div class="" *ngFor="let lid of leden"> 
+    <div  class="bg-orange-300 border-2 border-black  p-6 rounded-lg shadow-md w-2/6 m-auto mt-10" >
+      <h2 class="text-2xl font-semibold mb-4 text-center">Lid Overview</h2>
+  
+      <!-- Customer Information -->
+      <div class="mb-4">
+        <p><strong class="text-gray-800">Naam</strong> {{lid.voornaam}} {{lid.naam}} </p>
+        
+        <br>
+        
+        <p><strong class="text-gray-800">Email 1 ( OPMERKING ):</strong> {{lid.email}} </p>
+<!--         <p><strong class="text-gray-800">Email 2 ( OPMERKING ):</strong> john.doe@example.com</p> -->
+        
+        <br>
+        
+        <p><strong class="text-gray-800">Telefoon 1 ( OPMERKING ):</strong> {{lid.telefoon}} </p>
+<!--         <p><strong class="text-gray-800">Telefoon 2 ( OPMERKING ):</strong> (123) 456-7890</p> -->
+
+        <br>
+
+        <p><strong class="text-gray-800">Address 1 ( OPMERKING ):</strong> {{lid.Straat}} {{lid.Huisnummer}} {{lid.Postcode}} {{lid.Gemeente}} </p>
+<!--         <p><strong class="text-gray-800">Address 2 ( OPMERKING ):</strong> Superstraat 22 2627 Schelle </p> -->
+        
+        <br>
+
+        <p><strong class="text-gray-800">Geboortedatum</strong> 4 Oktober 2002</p>            
+
+        <br>
+
+        <p><strong class="text-gray-800">Afdeling</strong> {{lid.afdeling}} </p>
+        
+
+      </div>
+  
+      <!-- Edit and Delete Buttons -->
+      <div class="flex justify-between">
+        <button class="bg-yellow-400 hover:bg-yellow-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline-blue">
+          Aanpassen
+        </button>
+        <button class="bg-red-400 hover:bg-red-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline-red">
+          Gestopt
+        </button>
+      </div>
+    </div>
+  </div>
+  
