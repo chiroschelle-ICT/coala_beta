@@ -8,26 +8,35 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   private baseUrl = 'http://localhost:3000/api';
-  private apiUsersUrl = 'http://localhost:3000/api/users'; // Anders doen --> geen var voor elke api route
+  private apiUsersUrl = 'http://localhost:3000/api/users';
   private apiLedenUrl = 'http://localhost:3000/api/leden';
   private apiLedenAfdelingUrl = 'http://localhost:3000/api/leden/afdelingId';
 
 
   constructor(private http: HttpClient) {}
 
-  // user api calls
+  // --- user api calls
+  // get all users returns as 1 value
   getUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUsersUrl);
   }
+  // get 1 specific user according to username. returns id
+  getUserPerUsername(userName: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/users/${userName}`)
+  }
 
-  // leden api calls
+
+  // -- leden api calls
+  // get all leden and return them as 1 value
   getLeden(): Observable<any[]> {
     return this.http.get<any[]>(this.apiLedenUrl);
   }
+  // get All lid's of the parameters afdelingID
   getAfdelingId(afdelingId: any): Observable<any[]>{
     console.log("AfdelingId Service: "+afdelingId)
     return this.http.get<any[]>(`${this.baseUrl}/leden/${afdelingId}`);
   }
+  // get 1 specific lid according to the parameter (lidid)
   getLidById(lidId: any): Observable<any[]> {
     console.log("Service Lid id: "+lidId)
     return this.http.get<any[]>(`${this.baseUrl}/leden/lidId/${lidId}`)
