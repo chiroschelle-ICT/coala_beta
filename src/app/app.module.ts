@@ -17,6 +17,8 @@ import { AfdelingenComponent } from './afdelingen/afdelingen.component';
 import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.component';
 import { LedenDetailsComponent } from './leden-details/leden-details.component';
 
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { LedenDetailsComponent } from './leden-details/leden-details.component';
     AuthenticationModule,
     AuthenticationRoutingModule,
     HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

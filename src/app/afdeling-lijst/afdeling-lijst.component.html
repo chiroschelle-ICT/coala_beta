@@ -32,7 +32,7 @@
     </div>
 
     <div class="ml-64">
-      <input type="checkbox" class="w-5 h-5">
+      <input type="checkbox" class="w-5 h-5" id="inschrijvingCheckbox" [(ngModel)]="lid.lidgeldBetaald" (change)="handleCheckboxChange(lid.id, lid.lidgeldBetaald)">
     </div>
   </div>
   
