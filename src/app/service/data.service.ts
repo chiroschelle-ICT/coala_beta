@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   private baseUrl = 'http://localhost:3000/api';
+  private checkboxUrl = 'http://localhost:3000/api/leden/updateCheckbox/'
   private apiUsersUrl = 'http://localhost:3000/api/users';
   private apiLedenUrl = 'http://localhost:3000/api/leden';
   private apiLedenAfdelingUrl = 'http://localhost:3000/api/leden/afdelingId';
@@ -42,6 +43,14 @@ export class DataService {
     return this.http.get<any[]>(`${this.baseUrl}/leden/lidId/${lidId}`)
   }
 
+  // Checkbox Stuff
+  updateCheckboxState(lidId: number, lidgeldBetaald: boolean): Observable<any> {
+    const url = `${this.checkboxUrl}${lidId}`;
+    const body = { checkData: lidgeldBetaald }; // Use lidgeldBetaald for checkbox state
+    console.log("Service body");
+    console.log(body);
+    return this.http.put(url, body);
+  }
 
   
 }
