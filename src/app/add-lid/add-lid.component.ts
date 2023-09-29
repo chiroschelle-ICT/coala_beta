@@ -78,13 +78,21 @@ export class AddLidComponent implements OnInit {
       this.bgColor = "#9fff96"
       this.bColor = "3px solid green"
       this.responseMessage = "Nieuw Lid toegevoegd!"
+      this.clearFormInput()
     }
+  }
 
 
-
-
-
-
+  clearFormInput() {
+    this.voornaam = "";
+    this.name = "";
+    this.department = "";
+    this.email = "";
+    this.phone = "";
+    this.street = "";
+    this.houseNumber = "";
+    this.postcode = "";
+    this.city = "";
   }
 
   getAfdelingId(afdeling:string) {
