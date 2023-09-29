@@ -22,32 +22,33 @@
         <div class="bg-white p-4 rounded-lg shadow-md">
             <h2 class="text-xl font-semibold mb-2">Afdeling</h2>
             <div class="grid grid-cols-2 gap-1 text-sm text-center">
-                <div class="border-2 border-purple-700 bg-purple-400 rounded-sm py-1 px-4">Ribbel <i class="fa-solid fa-venus fa-sm"></i></div>            
-                <div class="border-2 border-purple-700 bg-purple-400 rounded-sm py-1 px-4">Ribbel <i class="fa-solid fa-mars fa-sm"></i></div>
-                <div class="border-2 border-yellow-700 bg-yellow-400 rounded-sm py-1 px-4">Speelclub <i class="fa-solid fa-venus fa-sm"></i></div>
-                <div class="border-2 border-yellow-700 bg-yellow-400 rounded-sm py-1 px-4">Speelclub <i class="fa-solid fa-mars fa-sm"></i></div>
-                <div class="border-2 border-green-700 bg-green-400 rounded-sm py-1 px-4">Kwiks <i class="fa-solid fa-venus fa-sm"></i></div>
-                <div class="border-2 border-green-700 bg-green-400 rounded-sm py-1 px-4">Rakkers <i class="fa-solid fa-mars fa-sm"></i></div>
-                <div class="border-2 border-red-700 bg-red-400 rounded-sm py-1 px-4">Tippers <i class="fa-solid fa-venus fa-sm"></i></div>
-                <div class="border-2 border-red-700 bg-red-400 rounded-sm py-1 px-4">Toppers <i class="fa-solid fa-mars fa-sm"></i></div>
-                <div class="border-2 border-blue-700 bg-blue-400 rounded-sm py-1 px-4">Tip 10's <i class="fa-solid fa-venus fa-sm"></i></div>
-                <div class="border-2 border-blue-700 bg-blue-400 rounded-sm py-1 px-4">Kerels <i class="fa-solid fa-mars fa-sm"></i></div>
-                <div class="border-2 border-orange-700 bg-orange-400 rounded-sm py-1 px-4">Aspi <i class="fa-solid fa-mars fa-sm"></i></div>
-                <div class="border-2 border-orange-700 bg-orange-400 rounded-sm py-1 px-4">Aspi <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 2]" class="cursor-pointer border-2 border-purple-700 bg-purple-400 rounded-sm py-1 px-4">Ribbel <i class="fa-solid fa-venus fa-sm"></i></div>            
+                <div [routerLink]="['/afdelingLijst', 1]" class="cursor-pointer border-2 border-purple-700 bg-purple-400 rounded-sm py-1 px-4">Ribbel <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 4]" class="cursor-pointer border-2 border-yellow-700 bg-yellow-400 rounded-sm py-1 px-4">Speelclub <i class="fa-solid fa-venus fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 3]" class="cursor-pointer border-2 border-yellow-700 bg-yellow-400 rounded-sm py-1 px-4">Speelclub <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 6]" class="cursor-pointer border-2 border-green-700 bg-green-400 rounded-sm py-1 px-4">Kwiks <i class="fa-solid fa-venus fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 5]" class="cursor-pointer border-2 border-green-700 bg-green-400 rounded-sm py-1 px-4">Rakkers <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 8]" class="cursor-pointer border-2 border-red-700 bg-red-400 rounded-sm py-1 px-4">Tippers <i class="fa-solid fa-venus fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 7]" class="cursor-pointer border-2 border-red-700 bg-red-400 rounded-sm py-1 px-4">Toppers <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 9]" class="cursor-pointer border-2 border-blue-700 bg-blue-400 rounded-sm py-1 px-4">Tip 10's <i class="fa-solid fa-venus fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 10]" class="cursor-pointer border-2 border-blue-700 bg-blue-400 rounded-sm py-1 px-4">Kerels <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 12]" class="cursor-pointer border-2 border-orange-700 bg-orange-400 rounded-sm py-1 px-4">Aspi <i class="fa-solid fa-mars fa-sm"></i></div>
+                <div [routerLink]="['/afdelingLijst', 11]" class="cursor-pointer border-2 border-orange-700 bg-orange-400 rounded-sm py-1 px-4">Aspi <i class="fa-solid fa-mars fa-sm"></i></div>
             </div>
         </div>
 
         <!-- 5 laatste ingeschreven leden -->
         <div class="bg-white p-4 rounded-lg shadow-md text-center">
             <h2 class="text-xl font-semibold mb-2">Totaal Ingeschreven Leden</h2>
-            <h3 class="text-7xl font-bold mt-16">100</h3>
+            <h3 class="text-7xl font-bold mt-16"> {{totalLeden}} </h3>
         </div>
         
 
         <!-- lijst van checklist en geeft aan hopeveel true zijn + manage knop -->
-        <div class="bg-white p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-2">Checklist Informatie</h2>
-        </div>
+        <!-- <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-2">Informatie</h2>
+            
+        </div> -->
 
         <!-- Grafiek voor het visualizeren van iets -->
         <div class="bg-white p-4 rounded-lg shadow-md col-span-2">
