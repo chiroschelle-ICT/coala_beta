@@ -17,7 +17,8 @@ import { AfdelingenComponent } from './afdelingen/afdelingen.component';
 import { AfdelingLijstComponent } from './afdeling-lijst/afdeling-lijst.component';
 import { LedenDetailsComponent } from './leden-details/leden-details.component';
 
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
+import { AddLidComponent } from './add-lid/add-lid.component'; // Import FormsModule
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
     AfdelingenComponent,
     AfdelingLijstComponent,
     LedenDetailsComponent,
+    AddLidComponent,
   ],
   imports: [
     BrowserModule,

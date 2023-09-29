@@ -32,6 +32,9 @@ export class DataService {
   getLeden(): Observable<any[]> {
     return this.http.get<any[]>(this.apiLedenUrl);
   }
+  getCountLeden(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/leden/count`);
+  }
   // get All lid's of the parameters afdelingID
   getAfdelingId(afdelingId: any): Observable<any[]>{
     console.log("AfdelingId Service: "+afdelingId)
@@ -41,6 +44,24 @@ export class DataService {
   getLidById(lidId: any): Observable<any[]> {
     console.log("Service Lid id: "+lidId)
     return this.http.get<any[]>(`${this.baseUrl}/leden/lidId/${lidId}`)
+  }
+  // Add lid
+  postLid(naam: string, voornaam: string, afdeling: string, afdelingId: number, email: string, telefoon:string, straat:string, huisnummer:string, gemeente:string, postcode:any) {
+    const url = `${this.baseUrl}/leden/addUser`;
+    const body = 
+    {
+      naam: naam,
+      voornaam: voornaam,
+      afdeling: afdeling,
+      afdelingId: afdelingId,
+      email: email,
+      telefoon: telefoon, 
+      straat: straat,
+      huisnummer: huisnummer,
+      gemeente: gemeente,
+      postcode: postcode,
+    }
+    return this.http.post(url, body);
   }
 
   // Checkbox Stuff
