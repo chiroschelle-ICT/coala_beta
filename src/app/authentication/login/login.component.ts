@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { delay } from 'rxjs';
 import { users } from 'src/app/interfaces/users';
+import { AuthenticationService } from 'src/app/service/authentication.service';
 import { DataService } from 'src/app/service/data.service';
 
 @Component({
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
   
   loginValid = false;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private authservice : AuthenticationService) {}
 
   ngOnInit() {
     this.dataService.getUsers().subscribe((data: any[]) => {
@@ -92,9 +93,12 @@ export class LoginComponent implements OnInit {
       if(data[0].naam === this.username && data[0].email === this.email && data[0].password === this.password) {
         console.log("Correct")
         // User Logged in
+        this.authservice.loginUser()
+
         this.bgColor = "#9fff96"
         this.bColor = "3px solid green"
         this.responseMessage = "U Bent Ingelogd"
+        
       }
       else {
         this.bgColor = "#fca5a5"
