@@ -12,16 +12,23 @@ export class DashboardComponent implements OnInit {
 
   leden: any[] = [];
 
-  totalLeden!: number 
+  totalLeden: any = 0
 
   ngOnInit(): void {
+    this.loadLeden()   
+  }
+
+  loadLeden() {
     this.dataservice.getLeden().subscribe((data: any) => {
       this.leden = data
+      this.totalLeden = this.leden.length
     });
-    this.dataservice.getCountLeden().subscribe((data: any) => {
-      this.totalLeden = data[0].count
-    });
-    this.totalLeden = this.leden.length
   }
+  loadCountLeden() {
+    this.dataservice.getCountLeden().subscribe((data: any) => {
+      // Does not work
+    }); 
+  }
+
 
 }
