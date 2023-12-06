@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdminRoutingModule } from './admin/admin-routing.module';
 
 import { NgChartsModule } from 'ng2-charts';
 import { ChartComponent } from './chart/chart.component';
@@ -40,7 +41,8 @@ import { AddLidComponent } from './add-lid/add-lid.component'; // Import FormsMo
     AuthenticationModule,
     AuthenticationRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AdminRoutingModule
     
   ],
   providers: [],
